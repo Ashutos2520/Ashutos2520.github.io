@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Code Demo</title>
+    <!-- Optional: Add syntax highlighting with Prism.js -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Grading System</h1>
+
+    <pre><code class="language-python">
+
+x=y=z=11
+while(x>10 or y>10 or z> 10):
+    x = int(input("Enter the score of first quiz: "))
+    y = int(input("Enter the score of second quiz: "))
+    z = int(input("Enter the score of third quiz: "))
+    if (x>10 or y>10 or z> 10):
+        print("Invalid Input, try again!!!")
+if (x>y) and (x>z):
+    Bestinqz = x
+    print(f"The best score in quiz is {x}")
+elif (y>x) and (y>z):
+    Bestinqz = y
+    print(f"The best score in quiz is {y}")
+else:
+    Bestinqz = z
+    print(f"The best score in quiz is {z}")
+if (Bestinqz==x):
+    Check = y>z
+    if (Check==True):
+        Secondbest = y
+        print(f"The second best score in quiz is {y}")
+    else:
+        Secondbest = z
+        print(f"The second best score in quiz is {z}")
+elif (Bestinqz==y):
+    Check = x>z
+    if (Check==True):
+        Secondbest = x
+        print(f"The second best score in quiz is {x}")
+    else:
+        Secondbest = z
+        print(f"The second best score in quiz is {z}")
+else:
+    Check = x>y
+    if (Check==True):
+        Secondbest = x
+        print(f"The second best score in quiz is {x}")
+    else:
+        Secondbest = y
+        print(f"The second best score in quiz is {y}")
+
+Avg = (Bestinqz + Secondbest)/2
+print(f"Average score of the best two performance is {Avg}")
+Scaling = (Avg*3)/10
+print(f"The scaled result for quiz is {Scaling}")
+#Presentation
+p = int(input("Enter the score of presentation: "))
+pscaling = (p*3)/10
+print(f"The scaled result for presentation is {pscaling}")
+#Class test
+C1=C2=26
+while(C1>25 or C2>25):
+    C1 = int(input("Enter the score of first class test: "))
+    C2 = int(input("Enter the score of second class test: "))
+    if(C1>25 or C2>25):
+        print("Inavlid input, try again!!")
+if (C1>C2):
+    Bestinclass=C1
+else:
+    Bestinclass=C2
+NormalisedC= (Bestinclass * 4)/25
+print(f"The normalised score for class tests is {NormalisedC}")
+#Mid-Sem
+Midscor=21
+while(Midscor>20):
+    Midscor=int(input("Enter your mid-sem score out of 20: "))
+    if (Midscor>20):
+        print("Invalid input, try again!!")
+print(f"Your score in mid seme is {Midscor}")
+# University examination: The Danger!!
+Uniscore=71
+while (Uniscore>70):
+    Uniscore = int(input("Enter the score obtained in University examinations: "))
+    if (Uniscore>70):
+        print("Invalid input, try again!!")
+Totalinternal= Scaling+pscaling+NormalisedC+Midscor
+print(f"The total internal marks is {Totalinternal}")
+
+Grandtotal= Totalinternal + Uniscore
+#Test
+if(Grandtotal>100):
+    print("Something is messed up!!")
+
+#Finally, The result!
+if(Grandtotal>=90):
+    print(f"Your Total internal marks you have obtained is {Totalinternal}\n")
+    print(f"Your Total marks you have obtained in University Examination is {Uniscore}\n")
+    print(f"Your Total marks is {Grandtotal}\n")
+    print("Your Grade is A+\n")
+    print("Party milega kya topper sahab??")
+
+elif(Grandtotal>=80):
+    print(f"Your Total internal marks is {Totalinternal}\n")
+    print(f"Your Total marks in University Examination is {Unisocre}\n")
+    print(f"Your Total marks is {Grandtotal}\n")
+    print("Your Grade is A\n")
+    print("Bhai tu baas pahuch hi gaya hai, next time you will be there!")
+
+elif(Grandtotal>=70):
+    print(f"Your Total internal marks is {Totalinternal}\n")
+    print(f"Your Total marks in University Examination is {Unisocre}\n")
+    print(f"Your Total marks is {Grandtotal}\n")
+    print("Your Grade is B\n")
+    print("Well done bro!")
+
+elif(Grandtotal>=60):
+    print(f"Your Total internal marks is {Totalinternal}\n")
+    print(f"Your Total marks in University Examination is {Unisocre}\n")
+    print(f"Your Total marks is {Grandtotal}\n")
+    print("Your Grade is C")
+    print("Well tried, Man. Keep on working and growing")
+
+elif(Grandtotal>=50):
+    print(f"Your Total internal marks is {Totalinternal}\n")
+    print(f"Your Total marks in University Examination is {Unisocre}\n")
+    print(f"Your Total marks is {Grandtotal}\n")
+    print("Your Grade is D")
+    print("Work Hard bro!")
+elif(Grandtotal>=40):
+    print(f"Your Total internal marks is {Totalinternal}\n")
+    print(f"Your Total marks in University Examination is {Unisocre}\n")
+    print(f"Your Total marks is {Grandtotal}\n")
+    print("Your Grade is P")
+    print("Bhai muthivation ko choro, start working!")
+else:
+    print("This system has failed you bro!\n")
+    </code></pre>
+
+    <!-- Prism.js script for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>
