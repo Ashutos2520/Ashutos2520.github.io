@@ -1,3 +1,4 @@
+#Following is script to run a telegram bot which sends back to the user questions of Physics, Chemistry and Mathematics.
 import random
 import os
 from telegram import Update, ReplyKeyboardMarkup
